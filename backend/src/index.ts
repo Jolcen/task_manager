@@ -9,7 +9,7 @@ const jwt = require("jsonwebtoken");
 const SECRET_KEY = "mi_clave_secreta";
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const connectionString = process.env.DATABASE_URL;
 
