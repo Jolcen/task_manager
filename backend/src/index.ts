@@ -27,7 +27,11 @@ const prisma = new PrismaClient({ adapter });
 // Uso de CORS: permite que el frontend en Vite se conecte al backend
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://taskmanagerpalacios.vercel.app",
+      "https://taskmanagerpalacios-3e4y8ti2y-jolcens-projects.vercel.app"
+    ],
   })
 );
 
